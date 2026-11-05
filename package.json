@@ -1,0 +1,33 @@
+{
+  "name": "hemasagar-portfolio",
+  "version": "1.0.0",
+  "description": "Modern developer portfolio for Hemasagar Raju Chamarthi, featuring interactive terminal, project creator, and career credentials",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hemasagarraju/hemasagar-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hemasagarraju/hemasagar-portfolio/issues"
+  },
+  "homepage": "https://github.com/Hemasagarraju/hemasagar-portfolio#readme",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "node server.js",
+    "build": "echo 'Build successful'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "portfolio",
+    "hemasagar",
+    "developer-portfolio",
+    "frontend",
+    "javascript",
+    "tailwind"
+  ],
+  "author": "Hemasagar Raju Chamarthi",
+  "license": "MIT"
+}

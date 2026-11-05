@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hemasagar Raju - Developer Portfolio</title>
+  <meta name="description"
+    content="I am a Frontend focused Software Developer from India, coding and crafting web apps to turn imagination into reality, specialized in creating scalable, user-centric applications.">
+  <meta name="keywords" content="Hemasagar Raju, Sagar, Portfolio, frontend developer, web apps, AI, ML">
+  <meta name="author" content="Hemasagar Raju Chamarthi">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheet (Exact itsvg.in Neo-Brutalist & Retro-Pop Design) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-slate-50 text-zinc-900 select-none antialiased">
+
+  <!-- ======================================================================
+       1. EXACT ITSVG.IN HERO SECTION & NAVBAR
+       ====================================================================== -->
+  <section id="spark-effect-zone" class="w-full flex flex-col items-center relative min-h-screen overflow-hidden">
+
+    <!-- Top Navbar -->
+    <nav id="home" class="flex justify-between p-4 items-baseline sm:px-16 sm:py-10 w-full z-20">
+
+      <!-- Left: Animated Helloooooooo! -->
+      <div class="flex items-baseline group cursor-pointer gap-2 relative hello-group">
+        <p
+          class="text-3xl sm:text-5xl group-hover:scale-95 transition-all ease-in-out duration-300 group-hover:rotate-12">
+          👋</p>
+        <div
+          class="text-2xl font-bold tracking-wider text-[#FBC138] group-hover:tracking-widest transition-all ease-in-out duration-300 hidden sm:flex items-baseline">
+          Hello<p class="hello-extend w-0 overflow-hidden transition-all ease-in-out duration-300">ooooooo</p>!
+        </div>
+      </div>
+
+      <!-- Right: Music Play Button, Socials & Live Customizer -->
+      <div class="flex items-center gap-6 sm:gap-8">
+
+        <!-- Live Audio Radio Toggle Button -->
+        <button id="play-audio-btn"
+          class="w-7 h-7 text-zinc-700 hover:text-black transition-colors cursor-pointer outline-none"
+          title="Play Music Radio" aria-label="Play Music">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="w-6 h-6 stroke-1">
+            <path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+            <path d="M9 17v-13h10v9"></path>
+            <path d="M9 8h10"></path>
+            <path d="M17 17v5"></path>
+            <path d="M21 17v5"></path>
+          </svg>
+        </button>
+
+        <!-- Social Icons with Scribble Hover Outline -->
+        <div id="top-social-links" class="flex items-center gap-1 sm:gap-2">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Owner Mode Active Indicator -->
+        <div id="owner-active-badge" class="hidden items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 border border-emerald-400 text-emerald-900 text-xs font-mono font-bold shadow-sm">
+          <span>👑 Owner</span>
+          <button type="button" onclick="window.logoutAdmin()" class="text-red-600 hover:text-red-800 font-bold ml-1 cursor-pointer" title="Exit Owner Mode (Preview as normal visitor)">Lock</button>
+        </div>
+
+        <!-- Account / Owner Trigger with Custom Avatar -->
+        <button id="open-customizer-btn" type="button" onclick="window.handleAccountButtonClick()"
+          class="flex items-center gap-2 pl-2 pr-3.5 py-1.5 rounded-full bg-zinc-900 text-white hover:bg-zinc-800 text-xs font-semibold shadow-sm transition-all cursor-pointer group"
+          title="Account & Owner Settings">
+          <img id="nav-avatar-img" class="w-5 h-5 rounded-full object-cover border border-zinc-700 bg-zinc-800" src="https://github.com/Hemasagarraju.png" alt="Avatar">
+          <span id="nav-account-label" class="hidden sm:inline">Account</span>
+        </button>
+
+      </div>
+
+      <!-- Hidden Radio Audio Stream -->
+      <audio src="https://usa9.fastcast4u.com/proxy/jamz?mp=/1" id="radio" preload="none"></audio>
+    </nav>
+
+    <!-- Giant Interactive Center Hero Name -->
+    <div class="w-full flex-1 flex flex-col justify-center items-center py-12 z-10">
+      <div
+        class="text-6xl sm:text-7xl md:text-9xl font-extrabold tracking-wide cursor-default leading-tight uppercase flex flex-col gap-4 justify-center items-center select-none">
+
+        <div id="hero-letters-container"
+          class="relative flex hover:tracking-widest transition-all ease-in-out duration-500 cursor-crosshair">
+          <!-- Dynamically rendered letters: H E M A S A G A R -->
+        </div>
+
+        <p class="text-xs sm:text-sm font-mono tracking-widest text-zinc-400 normal-case mt-2">
+          [ hover letters for colors & animations ]
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Wavy SVG Tech Marquee Ribbon (The iconic itsvg.in undulating text ribbon) -->
+    <div class="w-full h-96 absolute top-1/2 -translate-y-1/2 -z-10 overflow-hidden pointer-events-none opacity-25">
+      <svg class="w-[200vw] h-full -ml-[50vw]" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2530 740">
+        <path id="marquee-wave-path" fill="none" stroke="transparent"
+          d="M0.3 193.6c244.1 0 298.3 304.3 539 295.8 165.6-24.5 197-267.7 499.5-267.7 244.1 0 308.3 321.3 551 295 190.5-20.6 243.4-234.2 414-263.5 243.2-44.6 308.3 321.3 551 295" />
+        <text class="text-2xl sm:text-3xl font-bold font-mono tracking-wider fill-zinc-600">
+          <textPath xlink:href="#marquee-wave-path" startOffset="0">
+            — JavaScript — CSS — HTML — TypeScript — Next.js — React.js — Tailwind CSS — Framer Motion — Node.js —
+            Express.js — MongoDB — SQL — Redis — Redux — Git — GitHub — Vercel — Web APIs — Python — Figma —
+          </textPath>
+        </text>
+      </svg>
+    </div>
+
+    <!-- Subtle Background Grid with Faded Edge Masks -->
+    <div class="absolute inset-0 -z-50 bg-slate-50 flex justify-center overflow-hidden">
+      <div class="h-full w-full grid-bg">
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50 pointer-events-none">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================================
+       2. INTRO & ROTATING TAGLINE STICKERS + TERMINAL
+       ====================================================================== -->
+  <section class="flex flex-col items-center gap-16 w-full relative py-12 px-4 sm:px-8">
+    <div class="max-w-5xl xl:max-w-6xl w-full flex flex-col gap-4">
+
+      <div class="flex items-center gap-4 sm:gap-6 flex-wrap">
+        <div class="relative group cursor-pointer" onclick="document.getElementById('open-customizer-btn').click()" title="Click to change profile photo in Account Settings">
+          <img id="intro-avatar-img" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-3 border-black object-cover shadow-[4px_4px_0px_#000] bg-zinc-100 transition-transform duration-300 group-hover:scale-105 group-hover:rotate-2" src="https://github.com/Hemasagarraju.png" alt="Hemasagar Raju">
+          <span class="absolute -bottom-1 -right-1 bg-white border-2 border-black rounded-full w-6 h-6 flex items-center justify-center text-xs shadow-[2px_2px_0px_#000] group-hover:bg-[#FBC138] transition-colors" title="Change photo">📷</span>
+        </div>
+        <div class="flex-1 min-w-[240px]">
+          <p class="text-sm xs:text-base md:text-xl xl:text-2xl text-zinc-500 font-medium">
+            👋 Hey, I'm <span class="font-bold text-zinc-800" id="intro-name">Hemasagar Raju</span>, coding and crafting
+            products and I'm a...
+          </p>
+        </div>
+      </div>
+
+      <p class="text-3xl xs:text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-900 leading-tight">
+        Front-end focused Software Developer,
+      </p>
+
+      <div class="text-lg xs:text-2xl lg:text-3xl xl:text-4xl font-medium text-zinc-700 leading-relaxed">
+        specialized in building scalable, user-centric web apps <br class="hidden sm:inline" /> that prioritizes &nbsp;
+
+        <!-- Stickers: requirements, trends, UI / UX, accessibility, performance -->
+        <span class="inline-flex relative items-center gap-2 flex-wrap mt-2">
+
+          <span style="transform:rotate(-6deg)"
+            class="bg-gradient-to-b from-lime-100 to-lime-200 text-lime-800 ring-2 ring-lime-700 rounded-lg md:rounded-xl px-2.5 py-1 text-sm md:text-xl font-bold shadow-md inline-flex items-center gap-1">
+            <span>🔥</span>
+            <span>trends</span>
+          </span>
+
+          <span style="transform:rotate(6deg)"
+            class="bg-gradient-to-b from-pink-100 to-pink-200 text-pink-800 ring-2 ring-pink-700 rounded-lg md:rounded-xl px-2.5 py-1 text-sm md:text-xl font-bold shadow-md inline-flex items-center gap-1">
+            <span>✨</span>
+            <span>UI / UX</span>
+          </span>
+
+          <span style="transform:rotate(-9deg)"
+            class="bg-gradient-to-b from-yellow-100 to-yellow-200 text-yellow-800 ring-2 ring-yellow-700 rounded-lg md:rounded-xl px-2.5 py-1 text-sm md:text-xl font-bold shadow-md inline-flex items-center gap-1">
+            <span>👁️</span>
+            <span>accessibility</span>
+          </span>
+
+          <span style="transform:rotate(12deg)"
+            class="bg-gradient-to-b from-fuchsia-100 to-fuchsia-200 text-fuchsia-800 ring-2 ring-fuchsia-700 rounded-lg md:rounded-xl px-2.5 py-1 text-sm md:text-xl font-bold shadow-md inline-flex items-center gap-1">
+            <span>⚡</span>
+            <span>performance</span>
+          </span>
+
+        </span>.
+      </div>
+
+    </div>
+
+    <!-- Terminal Window: With Letters Scan Up-To-Bottom Design -->
+    <div id="intro" class="p-2 relative w-full flex justify-center items-center">
+      <div id="terminal-window" class="terminal-window w-2xl max-w-full">
+
+        <!-- Top-to-Bottom Moving Laser Scanner Beam -->
+        <div id="terminal-scanner-beam" class="terminal-scanner-beam active">
+          <div class="scanner-tag">SCAN: UP ➔ BOTTOM</div>
+        </div>
+
+        <!-- Matrix Letters Fall Canvas (Up to Bottom) -->
+        <canvas id="terminal-matrix-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-20"></canvas>
+
+        <!-- CRT Scanline Grid Texture -->
+        <div class="terminal-crt-overlay"></div>
+
+        <!-- Terminal Header with Controls & Letter Scanner Options -->
+        <div class="relative z-10 bg-zinc-900/95 px-4 py-2.5 flex items-center justify-between border-b border-zinc-800 backdrop-blur-sm select-none">
+          <!-- macOS Traffic Lights (Interactive Shortcuts) -->
+          <div class="flex items-center space-x-2">
+            <button type="button" onclick="window.clearTerminal()" class="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400 transition-colors cursor-pointer" title="Clear Terminal"></button>
+            <button type="button" onclick="window.toggleMatrixLetters()" class="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400 transition-colors cursor-pointer" title="Toggle Falling Letters (Matrix Rain)"></button>
+            <button type="button" onclick="window.triggerTerminalLetterScan()" class="w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 transition-colors cursor-pointer" title="Scan Letters Up-To-Bottom"></button>
+          </div>
+
+          <!-- Terminal Title & Status -->
+          <div class="flex items-center gap-2 text-xs font-semibold text-zinc-300 font-mono tracking-wider">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="text-zinc-400 hidden xs:inline">guest@hemasagar:</span>
+            <span class="text-emerald-400 font-bold">~ terminal</span>
+            <span id="terminal-scan-badge" class="px-1.5 py-0.5 rounded text-[10px] bg-emerald-950/80 text-emerald-400 border border-emerald-800 hidden sm:inline">📡 SCAN READY</span>
+          </div>
+
+          <!-- Right-side Quick Actions: Scan, Matrix, Options -->
+          <div class="flex items-center gap-1.5 text-xs">
+            <button type="button" onclick="window.triggerTerminalLetterScan()" class="px-2 py-1 rounded-md bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold transition-all cursor-pointer flex items-center gap-1" title="Trigger Top-to-Bottom Letter Scan">
+              <span>📡</span>
+              <span class="hidden md:inline">Scan Letters</span>
+            </button>
+            <button type="button" onclick="window.toggleMatrixLetters()" id="term-matrix-btn" class="px-2 py-1 rounded-md bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700 text-[11px] font-bold transition-all cursor-pointer flex items-center gap-1" title="Toggle Falling Letters Stream">
+              <span>⚡</span>
+              <span class="hidden md:inline">Matrix</span>
+            </button>
+            <button type="button" onclick="window.openTerminalOptions()" class="p-1 rounded-md bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white transition-colors cursor-pointer" title="Terminal Options in Account Settings">
+              ⚙️
+            </button>
+          </div>
+        </div>
+
+        <!-- Terminal Body & Scanned Letters Content -->
+        <div class="relative z-10 p-5 bg-zinc-950/90 text-zinc-200 font-mono text-xs sm:text-sm leading-relaxed">
+          <div id="terminal-content">
+            <!-- Dynamically populated with letter scanning animation -->
+          </div>
+
+          <!-- Interactive CLI Input Prompt -->
+          <div class="flex items-center gap-2 text-emerald-400 font-mono text-xs sm:text-sm mt-4 pt-3 border-t border-zinc-800/80">
+            <span class="text-emerald-500 font-bold select-none">hemasagar@portfolio:~$</span>
+            <input type="text" id="terminal-cli-input" class="bg-transparent border-none outline-none text-zinc-100 flex-1 font-mono text-xs sm:text-sm placeholder-zinc-600" placeholder="type 'scan', 'skills', or 'help'..." autocomplete="off" spellcheck="false" onkeydown="window.handleTerminalInputKey(event)">
+            <span class="w-2 h-4 bg-emerald-400 animate-pulse"></span>
+          </div>
+
+          <!-- Quick Command Chips for instant 1-click execution -->
+          <div class="flex items-center gap-1.5 flex-wrap mt-2.5 pt-1 text-[11px] text-zinc-500">
+            <span class="font-bold text-zinc-400">Try:</span>
+            <button type="button" onclick="window.runTerminalCommand('scan')" class="px-2 py-0.5 rounded bg-zinc-900 hover:bg-zinc-800 text-emerald-400 border border-zinc-800 cursor-pointer font-bold">scan</button>
+            <button type="button" onclick="window.runTerminalCommand('whoami')" class="px-2 py-0.5 rounded bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 cursor-pointer">whoami</button>
+            <button type="button" onclick="window.runTerminalCommand('skills')" class="px-2 py-0.5 rounded bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 cursor-pointer">skills</button>
+            <button type="button" onclick="window.runTerminalCommand('matrix')" class="px-2 py-0.5 rounded bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 cursor-pointer">matrix</button>
+            <button type="button" onclick="window.runTerminalCommand('help')" class="px-2 py-0.5 rounded bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 cursor-pointer">help</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       3. SIGNATURE NEO-BRUTALIST 3D POP PROJECT CARDS
+       ====================================================================== -->
+  <section id="projects" class="py-20 px-4 sm:px-8 max-w-6xl mx-auto w-full">
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 mb-12">
+      <div class="text-center sm:text-left">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold font-mono mb-2">
+          <span>🛠️</span>
+          <span>PORTFOLIO SHOWCASE</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+          Featured Projects & Tools
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-600 mt-2 max-w-xl">
+          Click any project card to view specs, launch live demo, or check GitHub code.
+        </p>
+      </div>
+
+      <!-- Direct Add Project Button (Owner Only) -->
+      <button type="button" onclick="window.openAddProjectModal()" id="btn-add-project"
+        class="admin-only-btn shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-sm border-2 border-black shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_#000] transition-all cursor-pointer">
+        <span class="text-base font-bold leading-none">➕</span>
+        <span>Add Project</span>
+      </button>
+    </div>
+
+    <!-- Project Cards Grid (The exact itsvg.in yellow/purple offset 3D pop cards) -->
+    <div id="projects-neo-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Dynamically populated -->
+    </div>
+
+  </section>
+
+  <!-- ======================================================================
+       4. GLOBAL IMPACT & USERS WORLDWIDE BANNER
+       ====================================================================== -->
+  <section class="py-16 px-4 bg-zinc-100/60 border-y border-zinc-200">
+    <div class="max-w-5xl mx-auto text-center space-y-8">
+
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">
+        <span>🌍</span>
+        <span>Global Reach</span>
+      </div>
+
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-zinc-900 max-w-2xl mx-auto leading-snug">
+        Our Products are used and loved by people from all around the world
+      </h2>
+
+      <div id="impact-stats-container" class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+        <!-- Dynamically populated -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       5. THE ICONIC 3D VISA CREDIT CARD EXPERIENCE TIMELINE (CAREER CREDENTIALS)
+       ====================================================================== -->
+  <section id="experience" class="py-20 px-4 sm:px-8 bg-zinc-900 text-white w-full overflow-hidden">
+
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
+      <div class="text-center sm:text-left">
+        <div class="text-xs uppercase tracking-widest text-amber-400 font-mono mb-2">CAREER CREDENTIALS</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold">Professional Experience</h2>
+        <p class="text-sm text-zinc-400 mt-2 font-mono flex items-center justify-center sm:justify-start gap-2">
+          <span>Roles, education & career milestones</span>
+        </p>
+      </div>
+
+      <!-- Add Experience Button (Owner Only) -->
+      <button type="button" onclick="window.openAddExperienceModal()" id="btn-add-experience"
+        class="admin-only-btn shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-sm border-2 border-black shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_#000] transition-all cursor-pointer">
+        <span class="text-base font-bold leading-none">➕</span>
+        <span>Add Experience</span>
+      </button>
+    </div>
+
+    <!-- Horizontal Swipeable Visa Cards Track -->
+    <div class="max-w-7xl mx-auto">
+      <div id="visa-cards-track" class="visa-cards-track">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================================
+       5B. KEY ACHIEVEMENTS & HONORS (CREDENTIAL CARDS)
+       ====================================================================== -->
+  <section id="achievements" class="py-20 px-4 sm:px-8 bg-zinc-950 text-white w-full overflow-hidden border-t border-zinc-800">
+
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
+      <div class="text-center sm:text-left">
+        <div class="text-xs uppercase tracking-widest text-amber-400 font-mono mb-2">HONORS & MILESTONES</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold">Key Achievements</h2>
+        <p class="text-sm text-zinc-400 mt-2 font-mono flex items-center justify-center sm:justify-start gap-2">
+          <span>Awards, hackathons, certifications & academic recognitions</span>
+        </p>
+      </div>
+
+      <!-- Add Achievement Button directly on website (Owner Only) -->
+      <button type="button" onclick="window.openAddAchievementModal()" id="btn-add-achievement"
+        class="admin-only-btn shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-sm border-2 border-black shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_#000] transition-all cursor-pointer">
+        <span class="text-base font-bold leading-none">🏆</span>
+        <span>Add Achievement</span>
+      </button>
+    </div>
+
+    <!-- Horizontal Swipeable Achievement Cards Track -->
+    <div class="max-w-7xl mx-auto">
+      <div id="achievements-cards-track" class="visa-cards-track">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================================
+       6. BENTO FEATURES GRID (DESIGNED FOR EXCELLENCE)
+       ====================================================================== -->
+  <section class="py-20 px-4 sm:px-8 max-w-6xl mx-auto w-full">
+
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-zinc-900">
+        Designed for Excellence & Polish
+      </h2>
+    </div>
+
+    <div id="bento-features-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Dynamically populated -->
+    </div>
+
+  </section>
+
+  <!-- ======================================================================
+       7. TESTIMONIALS SECTION
+       ====================================================================== -->
+  <section id="testimonials" class="py-20 px-4 sm:px-8 max-w-4xl mx-auto text-center">
+
+    <div class="text-xs uppercase tracking-widest text-blue-600 font-mono font-bold mb-2">TESTIMONIALS</div>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 mb-8">Loved by the Community</h2>
+
+    <div
+      class="p-8 sm:p-12 bg-white rounded-3xl border border-zinc-200 shadow-lg min-h-64 flex flex-col justify-center">
+      <div id="testimonial-card">
+        <!-- Dynamically populated -->
+      </div>
+
+      <!-- Prev / Next Buttons -->
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <button id="prev-testimonial-btn"
+          class="w-10 h-10 rounded-full border border-zinc-300 hover:bg-zinc-100 flex items-center justify-center text-zinc-700 transition-colors cursor-pointer"
+          aria-label="Previous">
+          ←
+        </button>
+        <button id="next-testimonial-btn"
+          class="w-10 h-10 rounded-full border border-zinc-300 hover:bg-zinc-100 flex items-center justify-center text-zinc-700 transition-colors cursor-pointer"
+          aria-label="Next">
+          →
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======================================================================
+       8. THE EXACT FLOATING BOTTOM DOCK NAVIGATION
+       ====================================================================== -->
+  <div
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 h-16 w-full max-w-xl rounded-full p-2 hidden sm:flex justify-between items-center font-medium floating-dock-bar text-sm text-white z-40">
+
+    <!-- Home button -->
+    <a href="#home" class="p-3 rounded-full hover:bg-white/10 transition-colors" aria-label="Home">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105">
+        </path>
+        <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0"></path>
+      </svg>
+    </a>
+
+    <!-- Nav buttons -->
+    <div class="flex items-center gap-2 text-xs font-semibold">
+      <a href="#projects" class="px-3.5 py-2 rounded-full hover:bg-white/10 transition-colors">Projects</a>
+      <a href="#experience" class="px-3.5 py-2 rounded-full hover:bg-white/10 transition-colors">Experience</a>
+      <a href="#achievements" class="px-3.5 py-2 rounded-full hover:bg-white/10 transition-colors">Achievements</a>
+      <a href="#testimonials" class="px-3.5 py-2 rounded-full hover:bg-white/10 transition-colors">Testimonials</a>
+    </div>
+
+    <!-- Let's talk CTA -->
+    <button onclick="window.openContactDialog()"
+      class="py-2.5 px-5 bg-white text-zinc-900 rounded-full font-bold text-xs flex items-center gap-1.5 hover:bg-zinc-200 transition-all cursor-pointer">
+      <span>Let's talk</span>
+      <span>💬</span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Floating Dock Button -->
+  <div class="sm:hidden fixed bottom-6 right-6 z-40">
+    <button onclick="window.openContactDialog()"
+      class="w-14 h-14 rounded-full bg-zinc-900 text-white flex items-center justify-center shadow-2xl text-xl cursor-pointer">
+      💬
+    </button>
+  </div>
+
+  <!-- ======================================================================
+       9B. OWNER VERIFICATION & LOGIN MODAL
+       ====================================================================== -->
+  <div id="owner-login-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-5 max-w-md">
+      <button onclick="window.closeOwnerLoginModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+
+      <div class="border-b border-zinc-200 pb-4 text-center">
+        <div class="w-14 h-14 rounded-full bg-amber-100 text-amber-800 border-2 border-black shadow-[3px_3px_0px_#000] flex items-center justify-center text-2xl mx-auto mb-3">
+          🔐
+        </div>
+        <h3 class="text-2xl font-extrabold text-zinc-900">Owner Verification</h3>
+        <p class="text-xs text-zinc-500 mt-1">
+          Only the portfolio owner (Hemasagar) can add or edit projects, achievements, and credentials.
+        </p>
+      </div>
+
+      <form id="owner-login-form" onsubmit="window.handleOwnerLoginSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1 text-center">
+            ENTER OWNER PIN
+          </label>
+          <input type="password" id="owner-login-pin" required maxlength="12"
+            class="custom-input font-mono text-center tracking-widest text-xl font-extrabold py-3"
+            placeholder="Enter PIN" autofocus autocomplete="current-password">
+          <p id="owner-login-error" class="hidden text-xs font-bold text-red-600 font-mono text-center mt-1.5"></p>
+        </div>
+
+        <div class="flex items-center gap-3 pt-2">
+          <button type="button" onclick="window.closeOwnerLoginModal()"
+            class="flex-1 py-2.5 rounded-xl border border-zinc-300 text-zinc-700 font-bold text-xs hover:bg-zinc-100 transition-colors cursor-pointer">
+            Cancel
+          </button>
+          <button type="submit"
+            class="flex-1 py-2.5 rounded-xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer">
+            🔓 Unlock Owner Mode
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10. PROJECT DETAILS MODAL
+       ====================================================================== -->
+  <div id="project-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8">
+      <button onclick="window.closeProjectModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+      <div id="project-modal-content">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10B. DIRECT IN-WEBSITE ADD PROJECT MODAL
+       ====================================================================== -->
+  <div id="add-project-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-5 max-w-xl">
+      <button onclick="window.closeAddProjectModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+
+      <div class="border-b border-zinc-200 pb-4">
+        <div
+          class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-bold mb-1">
+          <span>🚀</span>
+          <span>WEBSITE BUILDER</span>
+        </div>
+        <h3 class="text-2xl font-extrabold text-zinc-900">Add New Project</h3>
+        <p class="text-xs text-zinc-500 mt-1">Enter your project info — it will instantly appear on your live portfolio!
+        </p>
+      </div>
+
+      <form id="add-project-form" onsubmit="window.handleAddNewProject(event)" class="space-y-4">
+
+        <!-- Project Name / Title -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            PROJECT NAME / TITLE <span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="new-proj-title" required class="custom-input font-medium"
+            placeholder="e.g. AI Resume Screener">
+        </div>
+
+        <!-- Live Website URL -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            LIVE WEBSITE URL <span class="text-red-500">*</span>
+          </label>
+          <input type="url" id="new-proj-url" required class="custom-input font-medium"
+            placeholder="e.g. https://my-project.vercel.app">
+        </div>
+
+        <!-- GitHub Repo URL -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            GITHUB REPOSITORY URL
+          </label>
+          <input type="url" id="new-proj-github" class="custom-input font-medium"
+            placeholder="e.g. https://github.com/Hemasagarraju/my-project">
+        </div>
+
+        <!-- Short Description -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            PROJECT DESCRIPTION
+          </label>
+          <textarea id="new-proj-desc" rows="3" class="custom-input font-medium text-xs leading-relaxed"
+            placeholder="Briefly describe what this project does, key features, and problem it solves..."></textarea>
+        </div>
+
+        <!-- Tech Stack / Tags -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            TECH STACK / TAGS <span class="text-zinc-400 font-normal">(comma-separated)</span>
+          </label>
+          <input type="text" id="new-proj-tags" class="custom-input font-medium"
+            placeholder="e.g. React, Next.js, Python, Tailwind CSS">
+        </div>
+
+        <!-- Icon / Logo URL (Optional) -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            LOGO / ICON URL <span class="text-zinc-400 font-normal">(optional)</span>
+          </label>
+          <input type="url" id="new-proj-logo" class="custom-input font-medium text-xs"
+            placeholder="https://... (leave empty for automatic colorful icon)">
+        </div>
+
+        <!-- Action buttons -->
+        <div class="flex items-center justify-end gap-3 pt-3 border-t border-zinc-200">
+          <button type="button" onclick="window.closeAddProjectModal()"
+            class="px-5 py-2.5 rounded-xl border border-zinc-300 text-zinc-700 font-bold text-xs hover:bg-zinc-100 transition-colors cursor-pointer">
+            Cancel
+          </button>
+          <button type="submit"
+            class="px-6 py-2.5 rounded-xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] transition-all cursor-pointer">
+            🚀 Add Project to Portfolio
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10C. DIRECT IN-WEBSITE ADD ACHIEVEMENT MODAL
+       ====================================================================== -->
+  <div id="add-achievement-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-5 max-w-xl">
+      <button onclick="window.closeAddAchievementModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+
+      <div class="border-b border-zinc-200 pb-4">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-bold mb-1">
+          <span>🏆</span>
+          <span>HONORS & CREDENTIALS</span>
+        </div>
+        <h3 class="text-2xl font-extrabold text-zinc-900">Add New Achievement</h3>
+        <p class="text-xs text-zinc-500 mt-1">Showcase hackathons, awards, certifications, or academic milestones on your portfolio!</p>
+      </div>
+
+      <form id="add-achievement-form" onsubmit="window.handleAddNewAchievement(event)" class="space-y-4">
+
+        <!-- Title -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            ACHIEVEMENT TITLE / AWARD <span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="new-ach-title" required class="custom-input font-medium"
+            placeholder="e.g. 1st Place - Smart India Hackathon">
+        </div>
+
+        <!-- Issuer & Date -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+              ISSUER / ORGANIZATION <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="new-ach-issuer" required class="custom-input font-medium"
+              placeholder="e.g. Google Cloud, AITS, CodeChef">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+              DATE / YEAR
+            </label>
+            <input type="text" id="new-ach-date" class="custom-input font-medium"
+              placeholder="e.g. 2025 or Jan 2026">
+          </div>
+        </div>
+
+        <!-- Verification Link -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            CERTIFICATE / VERIFICATION LINK <span class="text-zinc-400 font-normal">(optional)</span>
+          </label>
+          <input type="url" id="new-ach-url" class="custom-input font-medium"
+            placeholder="https://... (link to certificate, post, or proof)">
+        </div>
+
+        <!-- Card Theme -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            CARD THEME GRADIENT
+          </label>
+          <select id="new-ach-theme" class="custom-input cursor-pointer font-medium">
+            <option value="gold">🥇 Royal Gold (Honor & Award)</option>
+            <option value="sapphire">💎 Sapphire Blue (Academic & Merit)</option>
+            <option value="emerald">🌿 Emerald Green (Hackathon & Tech)</option>
+            <option value="crimson">🔥 Crimson Ruby (Leadership & Winner)</option>
+            <option value="violet">⚡ Cyber Violet (Full-Stack & Innovation)</option>
+            <option value="obsidian">🖤 Obsidian Black (Executive Edition)</option>
+          </select>
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            DESCRIPTION / HIGHLIGHT <span class="text-zinc-400 font-normal">(optional)</span>
+          </label>
+          <textarea id="new-ach-desc" rows="2" class="custom-input font-medium text-xs leading-relaxed"
+            placeholder="Briefly describe the achievement or milestone..."></textarea>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="flex items-center justify-end gap-3 pt-3 border-t border-zinc-200">
+          <button type="button" onclick="window.closeAddAchievementModal()"
+            class="px-5 py-2.5 rounded-xl border border-zinc-300 text-zinc-700 font-bold text-xs hover:bg-zinc-100 transition-colors cursor-pointer">
+            Cancel
+          </button>
+          <button type="submit"
+            class="px-6 py-2.5 rounded-xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] transition-all cursor-pointer">
+            🏆 Add Achievement
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10D. ACHIEVEMENT DETAILS & DELETE MODAL
+       ====================================================================== -->
+  <div id="achievement-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-4">
+      <button onclick="window.closeAchievementModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+      <div id="achievement-modal-content">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10E. EXPERIENCE DETAILS & DELETE MODAL
+       ====================================================================== -->
+  <div id="experience-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-4">
+      <button onclick="window.closeExperienceModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+      <div id="experience-modal-content">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10F. ADD / EDIT EXPERIENCE FORM MODAL
+       ====================================================================== -->
+  <div id="experience-form-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-5 max-w-xl">
+      <button onclick="window.closeExperienceFormModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+
+      <div class="border-b border-zinc-200 pb-4">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-bold mb-1">
+          <span>💼</span>
+          <span id="exp-form-badge">CAREER CREDENTIAL</span>
+        </div>
+        <h3 id="exp-form-heading" class="text-2xl font-extrabold text-zinc-900">Add Experience</h3>
+        <p class="text-xs text-zinc-500 mt-1">Add education, work experience, internship or freelance credentials.</p>
+      </div>
+
+      <form id="experience-form" onsubmit="window.handleSaveExperience(event)" class="space-y-4">
+        <input type="hidden" id="exp-form-idx" value="-1">
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            ROLE / DEGREE / TITLE <span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="exp-form-role" required class="custom-input font-medium"
+            placeholder="e.g. B.Tech AI/ML or Frontend Developer">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+              COMPANY / UNIVERSITY <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="exp-form-company" required class="custom-input font-medium"
+              placeholder="e.g. AITS Tirupati or Tech Corp">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+              PERIOD / TENURE <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="exp-form-tenure" required class="custom-input font-medium"
+              placeholder="e.g. 2025-2029 or Present or Fresher">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            CARD THEME GRADIENT
+          </label>
+          <select id="exp-form-theme" class="custom-input cursor-pointer font-medium">
+            <option value="violet">⚡ Royal Violet & Indigo</option>
+            <option value="cyan">🌊 Cyan & Soft Sand</option>
+            <option value="amber">🍂 Amber & Deep Wood</option>
+            <option value="crimson">🔥 Crimson Ruby & Bronze</option>
+            <option value="blue">💎 Deep Navy & Slate</option>
+            <option value="emerald">🌿 Deep Emerald & Forest</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            DESCRIPTION / HIGHLIGHT <span class="text-zinc-400 font-normal">(optional)</span>
+          </label>
+          <textarea id="exp-form-desc" rows="2" class="custom-input font-medium text-xs leading-relaxed"
+            placeholder="Key responsibilities, courses or achievements in this role..."></textarea>
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-3 border-t border-zinc-200">
+          <button type="button" onclick="window.closeExperienceFormModal()"
+            class="px-5 py-2.5 rounded-xl border border-zinc-300 text-zinc-700 font-bold text-xs hover:bg-zinc-100 transition-colors cursor-pointer">
+            Cancel
+          </button>
+          <button type="submit" id="exp-form-submit-btn"
+            class="px-6 py-2.5 rounded-xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] transition-all cursor-pointer">
+            💾 Save Experience
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10G. EDIT PROJECT MODAL
+       ====================================================================== -->
+  <div id="edit-project-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-5 max-w-xl">
+      <button onclick="window.closeEditProjectModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+
+      <div class="border-b border-zinc-200 pb-4">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-bold mb-1">
+          <span>✏️</span>
+          <span>EDIT PROJECT</span>
+        </div>
+        <h3 class="text-2xl font-extrabold text-zinc-900">Edit Project Details</h3>
+        <p class="text-xs text-zinc-500 mt-1">Update your project title, links, description or tags.</p>
+      </div>
+
+      <form id="edit-project-form" onsubmit="window.handleSaveEditProject(event)" class="space-y-4">
+        <input type="hidden" id="edit-proj-idx" value="-1">
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            PROJECT NAME / TITLE <span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="edit-proj-title" required class="custom-input font-medium">
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            LIVE WEBSITE URL <span class="text-red-500">*</span>
+          </label>
+          <input type="url" id="edit-proj-url" required class="custom-input font-medium">
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            GITHUB REPOSITORY URL
+          </label>
+          <input type="url" id="edit-proj-github" class="custom-input font-medium">
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            PROJECT DESCRIPTION
+          </label>
+          <textarea id="edit-proj-desc" rows="3" class="custom-input font-medium text-xs leading-relaxed"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            TECH STACK / TAGS <span class="text-zinc-400 font-normal">(comma-separated)</span>
+          </label>
+          <input type="text" id="edit-proj-tags" class="custom-input font-medium">
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            LOGO / ICON URL <span class="text-zinc-400 font-normal">(optional)</span>
+          </label>
+          <input type="url" id="edit-proj-logo" class="custom-input font-medium text-xs">
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-3 border-t border-zinc-200">
+          <button type="button" onclick="window.closeEditProjectModal()"
+            class="px-5 py-2.5 rounded-xl border border-zinc-300 text-zinc-700 font-bold text-xs hover:bg-zinc-100 transition-colors cursor-pointer">
+            Cancel
+          </button>
+          <button type="submit"
+            class="px-6 py-2.5 rounded-xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] transition-all cursor-pointer">
+            💾 Save Changes
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10H. EDIT ACHIEVEMENT MODAL
+       ====================================================================== -->
+  <div id="edit-achievement-modal" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-5 max-w-xl">
+      <button onclick="window.closeEditAchievementModal()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+
+      <div class="border-b border-zinc-200 pb-4">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-bold mb-1">
+          <span>✏️</span>
+          <span>EDIT ACHIEVEMENT</span>
+        </div>
+        <h3 class="text-2xl font-extrabold text-zinc-900">Edit Achievement</h3>
+        <p class="text-xs text-zinc-500 mt-1">Update honor title, issuer, proof link, or theme.</p>
+      </div>
+
+      <form id="edit-achievement-form" onsubmit="window.handleSaveEditAchievement(event)" class="space-y-4">
+        <input type="hidden" id="edit-ach-idx" value="-1">
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            ACHIEVEMENT TITLE / AWARD <span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="edit-ach-title" required class="custom-input font-medium">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+              ISSUER / ORGANIZATION <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="edit-ach-issuer" required class="custom-input font-medium">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+              DATE / YEAR
+            </label>
+            <input type="text" id="edit-ach-date" class="custom-input font-medium">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            CERTIFICATE / VERIFICATION LINK <span class="text-zinc-400 font-normal">(optional)</span>
+          </label>
+          <input type="url" id="edit-ach-url" class="custom-input font-medium">
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            CARD THEME GRADIENT
+          </label>
+          <select id="edit-ach-theme" class="custom-input cursor-pointer font-medium">
+            <option value="gold">🥇 Royal Gold (Honor & Award)</option>
+            <option value="sapphire">💎 Sapphire Blue (Academic & Merit)</option>
+            <option value="emerald">🌿 Emerald Green (Hackathon & Tech)</option>
+            <option value="crimson">🔥 Crimson Ruby (Leadership & Winner)</option>
+            <option value="violet">⚡ Cyber Violet (Full-Stack & Innovation)</option>
+            <option value="obsidian">🖤 Obsidian Black (Executive Edition)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-800 mb-1">
+            DESCRIPTION / HIGHLIGHT <span class="text-zinc-400 font-normal">(optional)</span>
+          </label>
+          <textarea id="edit-ach-desc" rows="2" class="custom-input font-medium text-xs leading-relaxed"></textarea>
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-3 border-t border-zinc-200">
+          <button type="button" onclick="window.closeEditAchievementModal()"
+            class="px-5 py-2.5 rounded-xl border border-zinc-300 text-zinc-700 font-bold text-xs hover:bg-zinc-100 transition-colors cursor-pointer">
+            Cancel
+          </button>
+          <button type="submit"
+            class="px-6 py-2.5 rounded-xl bg-[#FBC138] hover:bg-amber-400 text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] transition-all cursor-pointer">
+            💾 Save Changes
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       11. LET'S TALK CONTACT DIALOG
+       ====================================================================== -->
+  <div id="contact-dialog" class="modal-backdrop">
+    <div class="modal-content relative p-6 sm:p-8 space-y-6">
+      <button onclick="window.closeContactDialog()"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm cursor-pointer z-10">
+        ✕
+      </button>
+
+      <div class="border-b border-zinc-200 pb-4">
+        <h3 class="text-2xl font-extrabold text-zinc-900">Let's Connect & Talk 💬</h3>
+        <p class="text-xs text-zinc-500 mt-1">Send a direct inquiry or message</p>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-700 mb-1">YOUR NAME</label>
+          <input type="text" id="dlg-name" class="custom-input" placeholder="e.g. John Doe">
+        </div>
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-700 mb-1">YOUR EMAIL</label>
+          <input type="email" id="dlg-email" class="custom-input" placeholder="john@example.com">
+        </div>
+        <div>
+          <label class="block text-xs font-mono font-bold text-zinc-700 mb-1">MESSAGE</label>
+          <textarea id="dlg-msg" rows="3" class="custom-input" placeholder="How can we collaborate?"></textarea>
+        </div>
+
+        <button onclick="alert('Message prepared! Email client will open.'); window.closeContactDialog();"
+          class="w-full py-3 bg-black text-white font-bold text-xs rounded-xl hover:bg-zinc-800 transition-colors">
+          Send Message ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       11. LIVE IN-BROWSER ACCOUNT DRAWER
+       ====================================================================== -->
+  <aside id="customizer-drawer" class="customizer-drawer">
+
+    <div class="p-5 border-b border-zinc-200 flex items-center justify-between bg-zinc-50">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <img id="drawer-avatar-img" class="w-10 h-10 rounded-full object-cover border-2 border-black shadow-[2px_2px_0px_#000] bg-amber-100" src="https://github.com/Hemasagarraju.png" alt="Profile">
+          <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
+        </div>
+        <div>
+          <h3 class="font-bold text-zinc-900 text-base">Account Settings</h3>
+          <p class="text-xs text-zinc-500">Edit your profile, photo & project details</p>
+        </div>
+      </div>
+      <button id="close-customizer-btn"
+        class="p-1.5 rounded-lg text-zinc-500 hover:text-black hover:bg-zinc-200 transition-colors cursor-pointer">✕</button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-5 space-y-6">
+
+      <!-- Personal Details & Photo -->
+      <div class="space-y-4">
+        <div class="flex justify-between items-center border-b pb-1">
+          <h4 class="text-xs font-mono font-bold text-blue-600 uppercase tracking-wider">1. Profile & Photo</h4>
+          <span class="text-[10px] font-mono font-bold px-2 py-0.5 bg-yellow-100 text-yellow-800 rounded-full">CUSTOM PHOTO</span>
+        </div>
+
+        <!-- Custom Photo Setting Card -->
+        <div class="p-3.5 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border-2 border-black shadow-[3px_3px_0px_#000] space-y-3">
+          <div class="flex items-center gap-3.5">
+            <div class="relative">
+              <img id="custom-avatar-preview" class="w-16 h-16 rounded-full object-cover border-2 border-black shadow-[2px_2px_0px_#000] bg-white" src="https://github.com/Hemasagarraju.png" alt="Avatar Preview">
+              <span class="absolute -bottom-1 -right-1 bg-white border border-black rounded-full w-5 h-5 flex items-center justify-center text-[10px] shadow-[1px_1px_0px_#000]">📷</span>
+            </div>
+            <div class="flex-1 space-y-1">
+              <p class="text-xs font-bold text-zinc-900">Custom Profile Photo</p>
+              <p class="text-[11px] text-zinc-600 leading-tight">Upload an image file from your device or paste a web URL.</p>
+              <div class="flex items-center gap-2 pt-1 flex-wrap">
+                <button type="button" onclick="document.getElementById('custom-avatar-file').click()"
+                  class="px-2.5 py-1 bg-black hover:bg-zinc-800 text-white text-[11px] font-bold rounded-lg transition-colors cursor-pointer flex items-center gap-1 shadow-sm">
+                  <span>📁</span>
+                  <span>Upload File</span>
+                </button>
+                <input type="file" id="custom-avatar-file" accept="image/*" class="hidden" onchange="window.handleAvatarFileUpload(event)">
+                <button type="button" onclick="window.usePresetAvatar('github')"
+                  class="px-2.5 py-1 bg-white hover:bg-zinc-100 text-zinc-800 text-[11px] font-bold rounded-lg border border-zinc-300 transition-colors cursor-pointer flex items-center gap-1">
+                  <span>🐙</span>
+                  <span>GitHub</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-mono font-semibold text-zinc-700 mb-1">Photo Image URL</label>
+            <div class="relative flex items-center">
+              <input type="url" id="custom-avatar-url" class="custom-input text-xs pr-16" placeholder="https://example.com/photo.jpg" oninput="window.handleAvatarUrlInput(this.value)">
+              <button type="button" onclick="window.previewAvatarUrl()" class="absolute right-1 px-2.5 py-1 text-[10px] font-bold bg-zinc-200 hover:bg-zinc-300 rounded text-zinc-800 cursor-pointer">Preview</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-zinc-600 mb-1">Your Name</label>
+          <input type="text" id="custom-name" class="custom-input" placeholder="Hemasagar">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-zinc-600 mb-1">Role / Headline</label>
+          <input type="text" id="custom-role" class="custom-input" placeholder="Front-end focused Software Developer,">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-zinc-600 mb-1">Email</label>
+          <input type="email" id="custom-email" class="custom-input" placeholder="hemasagarraju94@gmail.com">
+        </div>
+
+        <!-- Owner Security PIN -->
+        <div class="pt-2 border-t border-zinc-200">
+          <label class="block text-xs font-mono font-bold text-zinc-700 mb-1">Owner Security PIN (Only you can edit)</label>
+          <div class="flex items-center gap-2">
+            <input type="password" id="custom-owner-pin" class="custom-input font-mono text-xs font-bold" placeholder="Enter new PIN">
+            <button type="button" onclick="window.toggleShowOwnerPin()" class="px-2.5 py-2 bg-zinc-200 hover:bg-zinc-300 text-zinc-800 text-xs font-bold rounded-lg cursor-pointer" title="Toggle Show/Hide PIN">👁️</button>
+          </div>
+          <p class="text-[10px] text-zinc-500 mt-1">Visitors cannot add, edit, or delete anything without this PIN.</p>
+        </div>
+
+        <button id="save-personal-btn"
+          class="w-full py-2.5 bg-black text-white font-bold text-xs rounded-xl hover:bg-zinc-800 transition-colors cursor-pointer flex items-center justify-center gap-2 shadow-[2px_2px_0px_#000]">
+          <span>💾</span>
+          <span>Save Profile, PIN & Photo</span>
+        </button>
+      </div>
+
+      <!-- Project Customizer -->
+      <div class="space-y-3 pt-4 border-t border-zinc-200">
+        <div class="flex justify-between items-center border-b pb-1">
+          <h4 class="text-xs font-mono font-bold text-blue-600 uppercase tracking-wider">2. Project Details</h4>
+          <button id="add-new-proj-btn" class="text-xs font-bold text-emerald-600 hover:underline">+ Add New</button>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-zinc-600 mb-1">Select Project</label>
+          <select id="custom-project-select" class="custom-input cursor-pointer"></select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-zinc-600 mb-1">Project Name</label>
+          <input type="text" id="custom-proj-title" class="custom-input">
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-xs font-mono text-zinc-600 mb-1">Subdomain</label>
+            <input type="text" id="custom-proj-domain" class="custom-input" placeholder="gprm.itsvg.in">
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-zinc-600 mb-1">Users Metric</label>
+            <input type="text" id="custom-proj-users" class="custom-input" placeholder="150K+ Users">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-zinc-600 mb-1">URL</label>
+          <input type="text" id="custom-proj-url" class="custom-input">
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-zinc-600 mb-1">Description</label>
+          <textarea id="custom-proj-desc" rows="2" class="custom-input"></textarea>
+        </div>
+
+        <button id="save-project-btn"
+          class="w-full py-2 bg-black text-white font-bold text-xs rounded-lg hover:bg-zinc-800 transition-colors">
+          Save Project Changes
+        </button>
+      </div>
+
+      <!-- 3. Terminal & Letter Scanner Options -->
+      <div id="account-terminal-options" class="space-y-3 pt-4 border-t border-zinc-200">
+        <div class="flex justify-between items-center border-b pb-1">
+          <h4 class="text-xs font-mono font-bold text-blue-600 uppercase tracking-wider">3. Terminal Options</h4>
+          <span class="text-[10px] font-mono font-bold px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded-full">SCAN DESIGN</span>
+        </div>
+
+        <div class="p-3.5 bg-zinc-950 text-zinc-100 rounded-2xl border-2 border-black shadow-[3px_3px_0px_#000] space-y-3 font-mono">
+          <!-- Option 1: Letters Scan Up-To-Bottom -->
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-xs font-bold text-emerald-400">Letters Scan (Up-to-Bottom)</p>
+              <p class="text-[11px] text-zinc-400">Laser beam scans characters from top to bottom</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" id="opt-terminal-scan" checked onchange="window.setTerminalScanOption(this.checked)" class="sr-only peer">
+              <div class="w-9 h-5 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-500"></div>
+            </label>
+          </div>
+
+          <!-- Option 2: Matrix Falling Letters -->
+          <div class="flex items-center justify-between pt-2.5 border-t border-zinc-800">
+            <div>
+              <p class="text-xs font-bold text-emerald-400">Matrix Falling Letters</p>
+              <p class="text-[11px] text-zinc-400">Digital rain letters stream down from top to bottom</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" id="opt-terminal-matrix" checked onchange="window.setTerminalMatrixOption(this.checked)" class="sr-only peer">
+              <div class="w-9 h-5 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-500"></div>
+            </label>
+          </div>
+
+          <!-- Option 3: Terminal Color Theme -->
+          <div class="pt-2.5 border-t border-zinc-800">
+            <label class="block text-[11px] font-bold text-zinc-300 mb-1.5">Scanner Color Theme</label>
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" onclick="window.setTerminalTheme('emerald')" class="py-1 px-2 text-[10px] font-bold rounded border border-emerald-500 bg-emerald-950/80 text-emerald-300 hover:bg-emerald-900 transition-colors cursor-pointer">
+                🟢 Emerald
+              </button>
+              <button type="button" onclick="window.setTerminalTheme('cyan')" class="py-1 px-2 text-[10px] font-bold rounded border border-cyan-500 bg-cyan-950/80 text-cyan-300 hover:bg-cyan-900 transition-colors cursor-pointer">
+                🔵 Cyber Cyan
+              </button>
+              <button type="button" onclick="window.setTerminalTheme('amber')" class="py-1 px-2 text-[10px] font-bold rounded border border-amber-500 bg-amber-950/80 text-amber-300 hover:bg-amber-900 transition-colors cursor-pointer">
+                🟡 Amber
+              </button>
+            </div>
+          </div>
+
+          <!-- Trigger Button -->
+          <div class="pt-2.5 border-t border-zinc-800">
+            <button type="button" onclick="window.testTerminalScanFromSettings()" class="w-full py-2 bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-md">
+              <span>📡</span>
+              <span>Test / Run Letters Scan Now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="p-4 border-t border-zinc-200 bg-zinc-50 space-y-2">
+      <button type="button" onclick="window.logoutAdmin()"
+        class="w-full py-2.5 bg-zinc-900 text-white font-bold text-xs rounded-xl hover:bg-black transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-sm">
+        <span>🔒</span>
+        <span>Exit Owner Mode (Lock Portfolio)</span>
+      </button>
+      <button id="reset-btn"
+        class="w-full py-2 border border-zinc-300 text-zinc-600 font-bold text-xs rounded-xl hover:bg-zinc-100 transition-colors cursor-pointer">
+        Reset to Original Defaults
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ======================================================================
+       12. FOOTER
+       ====================================================================== -->
+  <footer class="py-12 border-t border-zinc-200 text-center text-xs text-zinc-500 pb-28">
+    
+    <!-- Highlighter Callout: If you like, send me 'Hi'! -->
+    <div class="mb-5 inline-block">
+      <button type="button" onclick="window.sendHiMessage()" class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FFE600] hover:bg-yellow-300 text-zinc-950 font-extrabold text-xs sm:text-sm border-2 border-black shadow-[4px_4px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_#000] active:translate-x-1 active:translate-y-1 transition-all cursor-pointer" title="Send a quick Hi!">
+        <span class="text-base group-hover:scale-125 transition-transform">👋</span>
+        <span class="tracking-wide">If you like, send me 'Hi'!</span>
+      </button>
+    </div>
+
+    <p class="text-zinc-700 font-semibold text-sm">Thanks for visiting my portfolio!</p>
+    <p class="mt-1">Designed & Built with 💛 by <strong class="text-zinc-800">Hemasagar Raju</strong></p>
+    <div class="mt-3 flex items-center justify-center gap-2">
+      <a href="https://github.com/Hemasagarraju/hemasagar-portfolio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 hover:bg-black text-white text-xs font-mono font-semibold shadow-sm transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
+        <span>hemasagar-portfolio</span>
+        <span class="text-amber-400">★</span>
+      </a>
+    </div>
+    <p class="mt-2 text-zinc-400">© 2026 Hemasagar Raju Chamarthi. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="portfolio-data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
